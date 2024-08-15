@@ -1,0 +1,473 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Roboto:wght@400;500;700&display=swap');
+@import url('variables.css');
+@import url('media.css');
+@import url('animations.css');
+
+/* Base styles */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 20px;
+}
+
+/* Paragraphs */
+p {
+  margin: 0 0 1.5rem 0; /* Space between paragraphs */
+  max-width: 700px; /* Limit the width for better readability */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 600;
+  margin: 2rem 0 1rem 0;
+}
+
+h1 {
+  font-size: 2.25rem;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 1.875rem;
+  line-height: 1.3;
+}
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+
+/* Blockquotes */
+blockquote {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  padding: 1rem 1.5rem;
+  margin: 2rem 0;
+  border-left: 4px solid #e2e2e2;
+}
+
+/* Header styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--header-bg);
+  color: var(--text-color);
+  border-radius: 8px;
+  margin-top: 60px;
+  text-transform: uppercase;
+}
+
+.grid-container header .logo img {
+  height: 50px;
+}
+
+.grid-container nav ul {
+  list-style: none;
+  display: flex;
+  gap: 0.1rem;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0;
+}
+
+nav ul li a,
+nav ul li button {
+  color: var(--text-color);
+  text-decoration: none;
+  background: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin: 0px;
+  border-radius: 3px;
+}
+
+
+nav ul li button {
+  background-color: var(--button-bg);
+}
+
+nav ul li a:hover,
+nav ul li button:hover {
+  background-color: var(--nav-btn-bg);
+}
+
+/* General button styles */
+.btn {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  padding: 0.8rem 1.3rem;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+  border: none;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  background-color: var(--button-bg-hover)
+}
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Button Update */
+.dropbtn {
+  background-color: var(--nav-btn-bg);
+  color: var(--text-color);
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  /* border-radius: 3px; */
+  /* font-size: 16px; */
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  position: relative;
+  padding: 0px;
+}
+
+.dropbtn::hover {
+  font-size: 12px;
+  margin-left: 8px;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  text-align: center;
+  font-size: small;
+  background-color: var(--main-bg);
+  min-width: 93px;
+  /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
+  z-index: 1;
+  right: 0; /* Align dropdown to the right edge */
+  max-width: calc(100vw - 20px); /* Prevent dropdown from overflowing the viewport */
+}
+
+.dropdown-content a {
+  color: var(--text-color);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-transform: uppercase;
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Add ellipsis for long text */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Main section styles */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  /* gap: 0.5rem; */
+}
+
+.grid-item {
+  display: none;
+}
+
+.grid-item.content {
+  display: block;
+}
+
+.grid-container .main-section {
+  position: relative;
+  text-align: center;
+  background-color: var(--content-bg);
+  color: var(--text-color);
+  margin: 0;
+  border-radius: 8px;
+  /* padding: 20px; */
+}
+
+.main-section .earth-container {
+  position: relative;
+  height: 40vh;
+  /* margin: 20px auto; */
+  /* margin-bottom: 20px; */
+  overflow: hidden; /* Ensures images don't extend beyond the container */
+  border-radius: 8px;
+}
+
+/* Apply animations in light mode */
+body.light-mode .main-section .earth-image {
+  background: var(--light-mode-earth-gradient-1);
+  animation: animateEarth1 10s infinite ease-in-out;
+  /* opacity: 0.5; */
+}
+
+body.light-mode .main-section .earth-image-2 {
+  background: var(--light-mode-earth-gradient-2);
+  animation: animateEarth2 12s infinite ease-in-out;
+  opacity: 0.9;
+}
+
+body.light-mode .main-section .earth-image-3 {
+  background: var(--light-mode-earth-gradient-3);
+  animation: animateEarth3 15s infinite ease-in-out;
+  opacity: 0.8;
+}
+
+body.light-mode .main-section .earth-image-4 {
+  background: var(--light-mode-earth-gradient-4);
+  animation: animateEarth4 16s infinite ease-in-out;
+  opacity: 0.7;
+}
+
+body.light-mode .main-section .earth-image-5 {
+  background: var(--light-mode-earth-gradient-5);
+  animation: animateEarth5 18s infinite ease-in-out;
+  opacity: 0.6;
+}
+
+body.light-mode .main-section .earth-image-6 {
+  background: var(--light-mode-earth-gradient-6);
+  animation: animateEarth6 20s infinite ease-in-out;
+  opacity: 0.5;
+}
+
+
+body.dark-mode .main-section .earth-image {
+  background: var(--dark-mode-earth-gradient-1);
+  animation: animateEarth1 10s infinite ease-in-out;
+}
+
+body.dark-mode .main-section .earth-image-2 {
+  background: var(--dark-mode-earth-gradient-2);
+  animation: animateEarth2 12s infinite ease-in-out;
+  opacity: 0.9;
+}
+
+body.dark-mode .main-section .earth-image-3 {
+  background: var(--dark-mode-earth-gradient-3);
+  animation: animateEarth3 15s infinite ease-in-out;
+  opacity: 0.8;
+}
+
+body.dark-mode .main-section .earth-image-4 {
+  background: var(--dark-mode-earth-gradient-4);
+  animation: animateEarth4 18s infinite ease-in-out;
+  opacity: 0.7;
+}
+
+body.dark-mode .main-section .earth-image-5 {
+  background: var(--dark-mode-earth-gradient-5);
+  animation: animateEarth5 20s infinite ease-in-out;
+  opacity: 0.6;
+}
+
+body.dark-mode .main-section .earth-image-6 {
+  background: var(--dark-mode-earth-gradient-6);
+  animation: animateEarth6 22s infinite ease-in-out;
+  opacity: 0.5;
+} 
+
+.main-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main-buttons button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  padding: 1rem 2rem;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
+/* Text section */
+.text-section {
+  padding: 20px;
+  margin-top: 20px;
+  /* text-align: justify; */
+  /* text-align-last: center; */
+}
+
+.text-section-content {
+  display: grid;
+  grid-template-columns: 1fr; /* Default to one column */
+  gap: 20px;
+}
+
+/* Footer styles */
+footer {
+  text-align: center;
+  background-color: var(--footer-bg);
+  color: var(--text-color);
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+.social-media img {
+  width: 25px;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Disable scroll */
+  background-color: rgba(0, 0, 0, 0.7); 
+  /* background-color: var(--main-bg); */
+
+  backdrop-filter: blur(5px);
+}
+
+/* Modal content */
+.modal-content {
+  background-color: var(--modal-bg);
+  color: var(--text-color);
+  margin: 15% auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  border-radius: 8px;
+  /* box-shadow: 0 2px 40px var(--main-bg); */
+}
+
+/* Modal Buttons */
+.modal-buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  transition: background-color 0.3s ease;
+}
+
+.modal-buttons button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.one-front {
+  font-size: 2rem;
+  transform-origin: center;
+  transition: transform 1s ease;
+  padding: 0;
+  margin: 0;
+}
+
+.one-front.zoom {
+  animation: slowZoom 3s ease-in 0.5s forwards;
+  /* color: rgb(255, 255, 255); */ 
+}
+
+/* Mode toggle button */ 
+.mode-toggle-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 12px; /* Adjusted font size for smaller emoji */
+  margin: 0;
+  /* margin-left: 5px; */
+  color: var(--text-color);
+  position: relative;
+  padding: 3px;
+}
+
+.mode-toggle-btn .icon {
+  font-size: 1.5rem; /* Further adjust the size of the emoji */
+}
+
+/* Tooltip styling */
+.mode-toggle-btn::after {
+  content: attr(data-tooltip); /* Use the data-tooltip attribute for the tooltip text */
+  position: absolute;
+  bottom: 130%; /* Position above the button */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--main-bg);
+  color: var(--text-color);
+  padding: 2px;
+  border-radius: 3px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease-in-out;
+  z-index: 10;
+}
+
+.mode-toggle-btn:hover::after {
+  opacity: 1; /* Show the tooltip on hover */
+}
+
+body.light-mode .mode-toggle-btn .icon {
+  content: "☀️"; /* Sun icon for light mode */
+}
+
+body.dark-mode .mode-toggle-btn .icon {
+  content: "🌙"; /* Moon icon for dark mode */
+}
+
+/* General icon button styling */
+.icon-btn {
+  padding: 0;
+  margin: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 10px; /* Adjusted font size for smaller emoji */
+  padding: 2px;
+  /* margin: 0; */
+  /* margin-left: 8px; */
+  color: var(--text-color);
+  position: relative;
+}
+
+/* Tooltip styling for the disco button */
+.icon-btn::after {
+  content: attr(data-tooltip); /* Use the data-tooltip attribute for the tooltip text */
+  position: absolute;
+  bottom: 150%; /* Position above the button */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--main-bg);
+  color: var(--text-color);
+  padding: 2px;
+  border-radius: 3px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease-in-out;
+  z-index: 10;
+}
+
+.icon-btn:hover::after {
+  opacity: 1; /* Show the tooltip on hover */
+}

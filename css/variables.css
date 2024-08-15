@@ -1,0 +1,146 @@
+/* variables.css */
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000;
+  --header-bg: #ffffff;
+  --footer-bg: #ffffff;
+  --button-bg: #dadada;
+  --nav-btn-bg: #ffffff;
+  --button-text: #000;
+  --main-bg: #ececec;
+  --content-bg: #f9f9f9;
+  --modal-bg: #ffffff;
+  --light-mode-earth-gradient-1: radial-gradient(
+    circle,
+    rgb(232, 236, 254) 50%,
+    rgb(236, 236, 236) 0%,
+    rgba(252, 70, 107, 0) 100%
+  );
+  --light-mode-earth-gradient-2: radial-gradient(
+    circle,
+    rgb(232, 236, 254) 50%,
+    rgb(236, 236, 236) 0%,
+    rgba(252, 70, 107, 0) 100%
+  );
+  --light-mode-earth-gradient-3: radial-gradient(
+    circle,
+    rgb(232, 236, 254) 50%,
+    rgb(236, 236, 236) 0%,
+    rgba(252, 70, 107, 0) 100%
+  );
+  --light-mode-earth-gradient-4: radial-gradient(
+    circle,
+    rgb(232, 236, 254) 50%,
+    rgb(236, 236, 236) 0%,
+    rgba(252, 70, 107, 0) 100%
+  );
+  --light-mode-earth-gradient-5: radial-gradient(
+    circle,
+    rgb(232, 236, 254) 50%,
+    rgb(236, 236, 236) 0%,
+    rgba(252, 70, 107, 0) 100%
+  );
+  --light-mode-earth-gradient-6: radial-gradient(
+    circle,
+    rgb(232, 236, 254) 50%,
+    rgb(236, 236, 236) 0%,
+    rgba(252, 70, 107, 0) 100%
+  );
+}
+
+/* Light mode variables */
+body.light-mode {
+  --bg-color: #ffffff;
+  --text-color: #000;
+  --header-bg: #ffffff;
+  --footer-bg: #ffffff;
+  --button-bg: #dfe6ff;
+  --button-bg-hover: rgba(212, 192, 255, 0.471);
+  --nav-btn-bg: rgba(212, 192, 255, 0.188);
+  --button-text: #000;
+  --main-bg: #ececec;
+  --content-bg: #f9f9f9;
+  --modal-bg: #ffffff;
+  --light-mode-earth-gradient-1: radial-gradient(
+    circle,
+    rgb(223, 246, 252) 0%,
+    /* rgb(255, 255, 255) 50%, */
+    rgba(252, 70, 107, 0) 100%
+  );
+  --light-mode-earth-gradient-2: radial-gradient(
+    circle,
+    rgb(244, 230, 255) 0%,
+    /* rgb(255, 255, 255) 50%, */
+    rgba(252, 70, 107, 0) 100%
+  );
+  --light-mode-earth-gradient-3: radial-gradient(
+    circle,
+    rgb(233, 244, 254) 0%,
+    /* rgb(255, 255, 255) 50%, */
+    rgba(252, 70, 107, 0) 100%
+  );
+  --light-mode-earth-gradient-4: radial-gradient(
+    circle,
+    rgb(232, 254, 254) 0%,
+    /* rgb(255, 255, 255) 50%, */
+    rgba(252, 70, 107, 0) 100%
+  );
+  --light-mode-earth-gradient-5: radial-gradient(
+    circle,
+    rgb(232, 255, 252) 0%,
+    /* rgb(255, 255, 255) 50%, */
+    rgba(252, 70, 107, 0) 100%
+  );
+  --light-mode-earth-gradient-6: radial-gradient(
+    circle,
+    rgb(247, 232, 254) 0%,
+    /* rgb(255, 255, 255) 50%, */
+    rgba(252, 70, 107, 0) 100%
+  );
+}
+
+/* Dark mode variables */
+body.dark-mode {
+  --bg-color: #0f0f0f;
+  --text-color: #fff;
+  --header-bg: #0f0f0f;
+  --footer-bg: #0f0f0f;
+  --button-bg: #281d32;
+  --button-bg-hover: rgba(255, 255, 255, 0.1);
+  --nav-btn-bg: rgba(212, 192, 255, 0.188);
+  --button-text: #fff;
+  --main-bg: #121212;
+  --content-bg: #111;
+  --modal-bg: #0f0f0f;
+  --dark-mode-earth-gradient-1: radial-gradient(
+    circle,
+    rgb(47, 20, 66) 0%,
+    rgba(252, 70, 107, 0) 100%
+  );
+  --dark-mode-earth-gradient-2: radial-gradient(
+    circle,
+    rgb(24, 37, 101) 0%,
+    rgba(252, 70, 107, 0) 100%
+  );
+  --dark-mode-earth-gradient-3: radial-gradient(
+    circle,
+    rgb(15, 78, 64) 0%,
+    rgba(252, 70, 107, 0) 100%
+  );
+  --dark-mode-earth-gradient-4: radial-gradient(
+    circle,
+    rgb(24, 37, 103) 0%,
+    rgba(252, 70, 107, 0) 100%
+  );
+  --dark-mode-earth-gradient-5: radial-gradient(
+    circle,
+    rgb(108, 105, 34) 0%,
+    rgba(252, 70, 107, 0) 100%
+  );
+  --dark-mode-earth-gradient-6: radial-gradient(
+    circle,
+    rgb(26, 40, 107) 0%,
+    rgba(252, 70, 107, 0) 100%
+  );
+}
