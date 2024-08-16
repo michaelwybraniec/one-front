@@ -13,6 +13,7 @@ body {
   color: var(--text-color);
   margin: 0;
   padding: 20px;
+  /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
 }
 
 /* Paragraphs */
@@ -64,6 +65,8 @@ header {
   color: var(--text-color);
   border-radius: 8px;
   margin-top: 60px;
+  margin-bottom: 30px;
+
   text-transform: uppercase;
 }
 
@@ -200,6 +203,8 @@ nav ul li button:hover {
   margin: 0;
   border-radius: 8px;
   /* padding: 20px; */
+  box-shadow: 0 4px 0px var(--shadows);
+  overflow: hidden;
 }
 
 .main-section .earth-container {
@@ -374,6 +379,7 @@ footer {
 }
 
 .one-front {
+  font-weight: 700;
   font-size: 2rem;
   transform-origin: center;
   transition: transform 1s ease;
@@ -470,4 +476,75 @@ body.dark-mode .mode-toggle-btn .icon {
 
 .icon-btn:hover::after {
   opacity: 1; /* Show the tooltip on hover */
+}
+
+/* General styles for the contact form */
+.contact-form-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  overflow: hidden;
+}
+
+.contact-form-container form {
+  z-index: 1; 
+  /* background-color: rgba(255, 255, 255, 0.9); */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  box-sizing: border-box;
+}
+
+.bg-image-contact-form {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 10px;
+  background: var(--bg-contact-from-gradient);
+  /* opacity: 1; Adjust opacity to make the form readable */
+  z-index: 0; /* Ensure it stays behind the form */
+  background-size: cover;
+  background-position: center;
+  animation: bgImageContactForm 12s infinite ease-in-out;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.form-group label {
+  width: 150px;
+  margin-right: 10px;
+  /* font-weight: bold; */
+  color: var(--text-color);
+  font-size: small;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.form-group input,
+.form-group textarea {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  border: 1px solid var(--shadows);
+  color: var(--text-color);
+  background-color: var(--form-inputs-bg);
+  box-shadow: 0 1px 0px var(--shadows);
+  box-sizing: border-box;
 }

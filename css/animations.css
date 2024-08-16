@@ -128,3 +128,20 @@
     transform: translateX(25px) translateY(-30px) scale(1.3) rotate(-300deg);
   }
 }
+
+
+@keyframes bgImageContactForm {
+  0%,
+  100% {
+    transform: translateX(0) translateY(-1000px) scale(8) rotate(0deg);
+  }
+  25% {
+    transform: translateX(0px) translateY(-1000px) scale(8) rotate(-60deg);
+  }
+  50% {
+    transform: translateX(0px) translateY(-2000px) scale(5) rotate(-80deg);
+  }
+  75% {
+    transform: translateX(0px) translateY(-3000px) scale(4) rotate(-300deg);
+  }
+}

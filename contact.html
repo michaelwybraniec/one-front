@@ -1,33 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact - ONE-FRONT</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body class="dark-mode">
-    <header>
-        <div class="logo">ONE-FRONT</div>
-        <nav>
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/media.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <main class="grid-container">
+      <div class="grid-item"></div>
+      <div class="grid-item content">
+        <header>
+          <div class="logo one-front">ONE-FRONT</div>
+          <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="https://medium.com/@michauwybraniec" target="_blank">Articles</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><button id="mode-toggle">Toggle Mode</button></li>
+              <li><a href="index.html">Home</a></li>
+              <li>
+                <a
+                  style="background-color: var(--button-bg-hover)"
+                  href="contact.html"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <a href="https://medium.com/@michauwybraniec" target="_blank"
+                  >Medium</a
+                >
+              </li>
+              <li>
+                <button
+                  id="zoom-in"
+                  class="icon-btn"
+                  data-tooltip="Zoom In"
+                  style="font-size: 12px; margin-left: 2px"
+                >
+                  <b>▲</b>
+                </button>
+              </li>
+              <li>
+                <button
+                  id="zoom-out"
+                  class="icon-btn"
+                  data-tooltip="Zoom Out"
+                  style="font-size: 12px"
+                >
+                  <b>▼</b>
+                </button>
+              </li>
+              <li>
+                <button class="mode-toggle-btn" id="mode-toggle-btn">
+                  <!-- The icon will be dynamically inserted here -->
+                </button>
+              </li>
             </ul>
-        </nav>
-    </header>
-    <main>
-        <h1>Contact Page</h1>
-        <!-- Additional content will go here -->
+          </nav>
+        </header>
+        <main>
+          <section class="main-section">
+            <div class="bg-image-contact-form"></div> 
+            <div class="contact-form-container">
+              <form action="#" method="post">
+                <div class="form-group">
+                  <label for="name">Name:</label>
+                  <input type="text" id="name" name="name" required />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email" required />
+                </div>
+                <div class="form-group">
+                  <label for="message">Message:</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn" style="margin-top: 20px">
+                    Submit</button>
+              </form>
+            </div>
+          </section>
+        </main>
+        <footer>
+          <div class="social-media">
+            <a
+              href="https://www.linkedin.com/in/michaelwybraniec/"
+              target="_blank"
+              ><img src="linkedin-icon.webp" alt="LinkedIn"
+            /></a>
+          </div>
+          <small style="margin-bottom: 0"
+            >&copy; 2024 - ONE-FRONT - "For a business, developers and
+            users."</small
+          >
+          <small>- all rights reserved.</small>
+        </footer>
+      </div>
+      <div class="grid-item"></div>
     </main>
-    <footer>
-        <div class="social-media">
-            <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
-        </div>
-        <p>&copy; 2024 ONE-FRONT all rights reserved.</p>
-    </footer>
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

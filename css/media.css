@@ -36,3 +36,26 @@
     grid-template-columns: 1fr 1fr; /* Split into two columns for screens 700px and wider */
   }
 }
+
+/* Responsive adjustments */
+@media (max-width: 599px) {
+  .form-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form-group label {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    margin: 0;
+  }
+
+  .contact-form-container button {
+    width: 100%; /* Full-width button on small screens */
+  }
+}

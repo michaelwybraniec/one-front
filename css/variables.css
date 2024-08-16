@@ -3,56 +3,10 @@
 :root {
   --bg-color: #ffffff;
   --text-color: #000;
-  --header-bg: #ffffff;
-  --footer-bg: #ffffff;
-  --button-bg: #dadada;
-  --nav-btn-bg: #ffffff;
-  --button-text: #000;
-  --main-bg: #ececec;
-  --content-bg: #f9f9f9;
-  --modal-bg: #ffffff;
-  --light-mode-earth-gradient-1: radial-gradient(
-    circle,
-    rgb(232, 236, 254) 50%,
-    rgb(236, 236, 236) 0%,
-    rgba(252, 70, 107, 0) 100%
-  );
-  --light-mode-earth-gradient-2: radial-gradient(
-    circle,
-    rgb(232, 236, 254) 50%,
-    rgb(236, 236, 236) 0%,
-    rgba(252, 70, 107, 0) 100%
-  );
-  --light-mode-earth-gradient-3: radial-gradient(
-    circle,
-    rgb(232, 236, 254) 50%,
-    rgb(236, 236, 236) 0%,
-    rgba(252, 70, 107, 0) 100%
-  );
-  --light-mode-earth-gradient-4: radial-gradient(
-    circle,
-    rgb(232, 236, 254) 50%,
-    rgb(236, 236, 236) 0%,
-    rgba(252, 70, 107, 0) 100%
-  );
-  --light-mode-earth-gradient-5: radial-gradient(
-    circle,
-    rgb(232, 236, 254) 50%,
-    rgb(236, 236, 236) 0%,
-    rgba(252, 70, 107, 0) 100%
-  );
-  --light-mode-earth-gradient-6: radial-gradient(
-    circle,
-    rgb(232, 236, 254) 50%,
-    rgb(236, 236, 236) 0%,
-    rgba(252, 70, 107, 0) 100%
-  );
-}
-
-/* Light mode variables */
-body.light-mode {
-  --bg-color: #ffffff;
-  --text-color: #000;
+  --form-inputs-bg: #ffffff;
+  --form-bg: #f1f1f1;
+  --form-border-color: #d0d0d0;
+  --shadows:  rgba(0, 0, 0, 0.07);
   --header-bg: #ffffff;
   --footer-bg: #ffffff;
   --button-bg: #dfe6ff;
@@ -98,20 +52,91 @@ body.light-mode {
     /* rgb(255, 255, 255) 50%, */
     rgba(252, 70, 107, 0) 100%
   );
+  --bg-contact-from-gradient: radial-gradient(
+    circle,
+    rgb(236, 232, 254) 0%,
+    /* rgb(255, 255, 255) 50%, */
+    rgba(252, 70, 107, 0) 100%
+  );
+}
+
+/* Light mode variables */
+body.light-mode {
+  --bg-color: #ffffff;
+  --text-color: #000;
+  --form-inputs-bg: #ffffff;
+  --form-bg: #f1f1f1;
+  --form-border-color: #d0d0d0;
+  --shadows:  rgba(0, 0, 0, 0.07);
+  --header-bg: #ffffff;
+  --footer-bg: #ffffff;
+  --button-bg: #dfe6ff;
+  --button-bg-hover: rgba(215, 210, 224, 0.471);
+  --nav-btn-bg: rgba(220, 220, 220, 0.188);
+  --button-text: #000;
+  --main-bg: #ececec;
+  --content-bg: #f9f9f9;
+  --modal-bg: #ffffff;
+  --light-mode-earth-gradient-1: radial-gradient(
+    circle,
+    rgb(223, 246, 252) 0%,
+    /* rgb(255, 255, 255) 50%, */
+    rgba(252, 70, 107, 0) 100%
+  );
+  --light-mode-earth-gradient-2: radial-gradient(
+    circle,
+    rgb(244, 230, 255) 0%,
+    /* rgb(255, 255, 255) 50%, */
+    rgba(252, 70, 107, 0) 100%
+  );
+  --light-mode-earth-gradient-3: radial-gradient(
+    circle,
+    rgb(233, 244, 254) 0%,
+    /* rgb(255, 255, 255) 50%, */
+    rgba(252, 70, 107, 0) 100%
+  );
+  --light-mode-earth-gradient-4: radial-gradient(
+    circle,
+    rgb(232, 254, 254) 0%,
+    /* rgb(255, 255, 255) 50%, */
+    rgba(252, 70, 107, 0) 100%
+  );
+  --light-mode-earth-gradient-5: radial-gradient(
+    circle,
+    rgb(232, 255, 252) 0%,
+    /* rgb(255, 255, 255) 50%, */
+    rgba(252, 70, 107, 0) 100%
+  );
+  --light-mode-earth-gradient-6: radial-gradient(
+    circle,
+    rgb(247, 232, 254) 0%,
+    /* rgb(255, 255, 255) 50%, */
+    rgba(252, 70, 107, 0) 100%
+  );
+  --bg-contact-from-gradient: radial-gradient(
+    circle,
+    /* rgb(220, 231, 255) 0%, */
+    rgb(228, 228, 228) 0%,
+    rgba(255, 255, 255, 0.123) 100%
+  );
 }
 
 /* Dark mode variables */
 body.dark-mode {
   --bg-color: #0f0f0f;
+  --shadows:  #000000;
+  --form-inputs-bg: #393939;
+  --form-border-color: #464646;
+  --form-bg: #1c1c1c;
   --text-color: #fff;
   --header-bg: #0f0f0f;
   --footer-bg: #0f0f0f;
-  --button-bg: #281d32;
+  --button-bg: #50415d;
   --button-bg-hover: rgba(255, 255, 255, 0.1);
   --nav-btn-bg: rgba(212, 192, 255, 0.188);
   --button-text: #fff;
-  --main-bg: #121212;
-  --content-bg: #111;
+  --main-bg: #2c2c2c;
+  --content-bg: #191919;
   --modal-bg: #0f0f0f;
   --dark-mode-earth-gradient-1: radial-gradient(
     circle,
@@ -142,5 +167,13 @@ body.dark-mode {
     circle,
     rgb(26, 40, 107) 0%,
     rgba(252, 70, 107, 0) 100%
+  );
+  --bg-contact-from-gradient: radial-gradient(
+    circle,
+    #392a46,
+
+    /* rgb(62, 35, 57) 0%, */
+
+    rgba(0, 0, 0, 0) 100%
   );
 }
