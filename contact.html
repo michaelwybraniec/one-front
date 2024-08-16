@@ -65,12 +65,12 @@
         </header>
         <main>
           <section class="main-section">
-            <div class="bg-image-contact-form"></div> 
+            <div class="bg-image-contact-form"></div>
             <div class="contact-form-container">
-              <form action="#" method="post">
+              <form id="contact-form">
                 <div class="form-group">
-                  <label for="name">NAME:</label>
-                  <input type="text" id="name" name="name" required />
+                  <label for="from_name">NAME:</label>
+                  <input type="text" id="from_name" name="from_name" required />
                 </div>
                 <div class="form-group">
                   <label for="email">EMAIL:</label>
@@ -81,12 +81,17 @@
                   <textarea
                     id="message"
                     name="message"
-                    rows="4"
+                    rows="10"
                     required
                   ></textarea>
                 </div>
-                <button type="submit" class="btn" style="margin-top: 20px">
-                    Submit</button>
+                <button
+                  type="submit"
+                  class="btn"
+                  style="margin-top: 20px; align-self: end"
+                >
+                  Submit
+                </button>
               </form>
             </div>
           </section>
@@ -109,6 +114,22 @@
       <div class="grid-item"></div>
     </main>
 
+    <div id="custom-confirm-modal" class="modal">
+      <div class="modal-content">
+        <div style="padding: 10px; padding-top: 20px;">
+            <div class="one-front">ONE-FRONT</div>
+          <p>Your email has been sent successfully.<br>Thank you for contacting us!</p>
+        </div>
+        <div>
+          <button class="btn" id="confirm-yes">OK</button>
+        </div>
+      </div>
+    </div>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
     <script src="script.js"></script>
   </body>
 </html>
