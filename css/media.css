@@ -59,3 +59,67 @@
     width: 100%; /* Full-width button on small screens */
   }
 }
+
+/* Styles for small screens (e.g., mobile devices) */
+@media (max-width: 550px) {
+  header {
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center;
+    text-align: center;
+    margin-top: 5px; */
+
+    display: flex;
+    justify-content: center; /* Center the remaining nav items */
+    align-items: center;
+    margin-top: 5px; /* Reduced margin-top */
+  }
+
+  .logo.one-front {
+    display: none; /* Hide the logo on small screens */
+  }
+
+  #zoom-in,
+  #zoom-out {
+    display: none; /* Hide the zoom-in and zoom-out buttons on small screens */
+  }
+
+  .one-front {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px; /* Add some space between the logo and the nav */
+    white-space: nowrap;
+    font-size: 24px;
+  }
+
+  .btn {
+    margin: 5px
+  }
+
+  p {
+    margin: 0
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  nav ul li {
+    /* display: block; */
+    
+    margin: 5px 0; /* Add some space between the navigation items */
+  }
+
+  nav ul li a, 
+  nav ul li button {
+    text-align: center;
+    width: 100%; /* Ensure full width for each item */
+    box-sizing: border-box;
+    /* margin: 20px; */
+   
+  }
+}

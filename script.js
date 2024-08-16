@@ -147,13 +147,22 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // Function to display the modal
-function showModal(message) {
-  // Display the modal
-  document.getElementById('custom-confirm-modal').style.display = 'block';
-  // Add event listener to the OK button to close the modal
-  document.getElementById('confirm-yes').addEventListener('click', function () {
-    document.getElementById('custom-confirm-modal').style.display = 'none';
-  });
+function showModal() {
+  const modal = document.getElementById('custom-confirm-modal');
+  if (modal) {
+    modal.style.display = 'block';
+    const confirmButton = document.getElementById('confirm-yes');
+    if (confirmButton) {
+      confirmButton.addEventListener('click', function () {
+        modal.style.display = 'none';
+        window.location.href = 'index.html'; // Redirect to index.html when OK is clicked
+      });
+    } else {
+      console.error("Element with ID 'confirm-yes' not found.");
+    }
+  } else {
+    console.error("Modal or message element not found.");
+  }
 }
 
 // Initial setup
