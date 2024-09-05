@@ -37,7 +37,7 @@
   }
 }
 
-/* Responsive adjustments */
+ 
 @media (max-width: 599px) {
   .form-group {
     flex-direction: column;
@@ -60,7 +60,17 @@
   }
 }
 
-/* Styles for small screens (e.g., mobile devices) */
+/* Optional: Adjust the size for small screens */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem; /* Still large enough for smaller screens */
+  }
+  .main-section {
+    min-height: 80vh; /* Slightly smaller min-height on mobile devices */
+  }
+}
+
+
 @media (max-width: 550px) {
   header {
     /* display: flex; */
@@ -121,5 +131,11 @@
     box-sizing: border-box;
     /* margin: 20px; */
    
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem; /* A bit smaller but won't collapse */
   }
 }

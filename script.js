@@ -1,3 +1,4 @@
+let defaultMode = 'light-mode'; // Set the default mode to 'light-mode'
 let zoomLevel = 1; // Initial zoom level (100%)
 let originalDevicePixelRatio = window.devicePixelRatio; // Store the original device pixel ratio
 
@@ -8,22 +9,22 @@ document.addEventListener("DOMContentLoaded", function () {
     zoomLevel = parseFloat(savedZoomLevel); // Parse the saved zoom level
     applyZoom(zoomLevel); // Apply the zoom level
   }
+
   const modeToggleBtn = document.getElementById('mode-toggle-btn');
   // Retrieve the saved mode from localStorage
   const savedMode = localStorage.getItem('mode');
-  // Apply the saved mode or default to light mode
-  if (savedMode) {
-    switchMode(savedMode);
-  } else {
-    switchMode('light');
-  }
+  // Apply the saved mode or default to the value of defaultMode
+  const initialMode = savedMode || defaultMode; 
+  switchMode(initialMode); // Apply the initial mode
+  
   // Event listener to toggle modes
   modeToggleBtn.addEventListener('click', () => {
-    const currentMode = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
-    const newMode = currentMode === 'dark' ? 'light' : 'dark';
+    const currentMode = document.body.classList.contains('dark-mode') ? 'dark-mode' : 'light-mode';
+    const newMode = currentMode === 'dark-mode' ? 'light-mode' : 'dark-mode';
     switchMode(newMode);
     localStorage.setItem('mode', newMode); // Save the new mode
   });
+
   initializeEarthImages();
   if (document.querySelector('.earth-image')) setMaxScale();
   setRandomHeights();
@@ -54,11 +55,16 @@ function applyZoom(level) {
 function switchMode(mode) {
   document.body.classList.remove('dark-mode', 'light-mode');
   const modeToggleBtn = document.getElementById('mode-toggle-btn');
-  if (mode === 'dark') {
+  
+  // Make sure the button is visible and styled properly
+  modeToggleBtn.style.display = 'inline-block';
+  modeToggleBtn.style.fontSize = '0.9rem';  // Ensure the icon size is visible
+  
+  if (mode === 'dark-mode') {
     document.body.classList.add('dark-mode');
-    modeToggleBtn.innerHTML = '🥷'; // Moon icon for dark mode
+    modeToggleBtn.innerHTML = '🌙'; // Moon icon for dark mode
     modeToggleBtn.setAttribute('data-tooltip', 'Dark mode');
-  } else if (mode === 'light') {
+  } else if (mode === 'light-mode') {
     document.body.classList.add('light-mode');
     modeToggleBtn.innerHTML = '⛱️'; // Sun icon for light mode
     modeToggleBtn.setAttribute('data-tooltip', 'Light mode');

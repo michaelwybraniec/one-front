@@ -6,7 +6,8 @@
 
 /* Base styles */
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
   font-size: 16px;
   line-height: 1.6;
   background-color: var(--bg-color);
@@ -25,15 +26,26 @@ p {
 }
 
 /* Headings */
-h1, h2, h3, h4, h5, h6 {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
   font-weight: 600;
   margin: 2rem 0 1rem 0;
+  margin: 15px;
+  overflow: hidden;
 }
 
 h1 {
-  font-size: 2.25rem;
+  font-weight: 800;
+  font-size: 3.5rem;
   line-height: 1.2;
+  white-space: nowrap;
+  min-width: fit-content;
 }
 
 h2 {
@@ -48,7 +60,8 @@ h3 {
 
 /* Blockquotes */
 blockquote {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
   font-size: 1.125rem;
   line-height: 1.5;
   padding: 1rem 1.5rem;
@@ -99,7 +112,6 @@ nav ul li button {
   border-radius: 3px;
 }
 
-
 nav ul li button {
   background-color: var(--button-bg);
 }
@@ -122,7 +134,7 @@ nav ul li button:hover {
 }
 
 .btn:hover {
-  background-color: var(--button-bg-hover)
+  background-color: var(--button-bg-hover);
 }
 
 /* Dropdown container */
@@ -162,7 +174,9 @@ nav ul li button:hover {
   /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
   z-index: 1;
   right: 0; /* Align dropdown to the right edge */
-  max-width: calc(100vw - 20px); /* Prevent dropdown from overflowing the viewport */
+  max-width: calc(
+    100vw - 20px
+  ); /* Prevent dropdown from overflowing the viewport */
 }
 
 .dropdown-content a {
@@ -196,20 +210,23 @@ nav ul li button:hover {
 }
 
 .grid-container .main-section {
+  max-width: 100%; /* Prevent overflow on large screens */
+  padding: 10px; /* Add padding around the content */
+  margin: 0 auto; /* Center the section */
+  box-sizing: border-box; /* Ensure padding is included in the total width */
+  overflow: hidden; /* Prevent content from overflowing */
   position: relative;
   text-align: center;
   background-color: var(--content-bg);
   color: var(--text-color);
-  margin: 0;
   border-radius: 8px;
-  /* padding: 20px; */
-  box-shadow: 0 4px 0px var(--shadows);
-  overflow: hidden;
+  box-shadow: 0 2px 0px var(--shadows);
+  min-height: 40vh;
 }
 
 .main-section .earth-container {
   position: relative;
-  height: 40vh;
+  height: 50vh;
   /* margin: 20px auto; */
   /* margin-bottom: 20px; */
   overflow: hidden; /* Ensures images don't extend beyond the container */
@@ -253,7 +270,6 @@ body.light-mode .main-section .earth-image-6 {
   opacity: 0.5;
 }
 
-
 body.dark-mode .main-section .earth-image {
   background: var(--dark-mode-earth-gradient-1);
   animation: animateEarth1 10s infinite ease-in-out;
@@ -287,7 +303,7 @@ body.dark-mode .main-section .earth-image-6 {
   background: var(--dark-mode-earth-gradient-6);
   animation: animateEarth6 22s infinite ease-in-out;
   opacity: 0.5;
-} 
+}
 
 .main-text {
   position: absolute;
@@ -308,8 +324,8 @@ body.dark-mode .main-section .earth-image-6 {
 
 /* Text section */
 .text-section {
-  padding: 20px;
-  margin-top: 20px;
+  /* padding: 20px; */
+  margin-top: 40px;
   /* text-align: justify; */
   /* text-align-last: center; */
 }
@@ -344,7 +360,7 @@ footer {
   width: 100%;
   height: 100%;
   overflow: hidden; /* Disable scroll */
-  background-color: rgba(0, 0, 0, 0.7); 
+  background-color: rgba(0, 0, 0, 0.7);
   /* background-color: var(--main-bg); */
 
   backdrop-filter: blur(5px);
@@ -380,7 +396,7 @@ footer {
 
 .one-front {
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 1.5rem;
   transform-origin: center;
   transition: transform 1s ease;
   padding: 0;
@@ -389,10 +405,10 @@ footer {
 
 .one-front.zoom {
   animation: slowZoom 3s ease-in 0.5s forwards;
-  /* color: rgb(255, 255, 255); */ 
+  /* color: rgb(255, 255, 255); */
 }
 
-/* Mode toggle button */ 
+/* Mode toggle button */
 .mode-toggle-btn {
   background: none;
   border: none;
@@ -411,7 +427,9 @@ footer {
 
 /* Tooltip styling */
 .mode-toggle-btn::after {
-  content: attr(data-tooltip); /* Use the data-tooltip attribute for the tooltip text */
+  content: attr(
+    data-tooltip
+  ); /* Use the data-tooltip attribute for the tooltip text */
   position: absolute;
   bottom: 130%; /* Position above the button */
   left: 50%;
@@ -433,11 +451,11 @@ footer {
 }
 
 body.light-mode .mode-toggle-btn .icon {
-  content: "☀️"; /* Sun icon for light mode */
+  content: '☀️'; /* Sun icon for light mode */
 }
 
 body.dark-mode .mode-toggle-btn .icon {
-  content: "🌙"; /* Moon icon for dark mode */
+  content: '🌙'; /* Moon icon for dark mode */
 }
 
 /* General icon button styling */
@@ -457,7 +475,9 @@ body.dark-mode .mode-toggle-btn .icon {
 
 /* Tooltip styling for the disco button */
 .icon-btn::after {
-  content: attr(data-tooltip); /* Use the data-tooltip attribute for the tooltip text */
+  content: attr(
+    data-tooltip
+  ); /* Use the data-tooltip attribute for the tooltip text */
   position: absolute;
   bottom: 150%; /* Position above the button */
   left: 50%;
@@ -493,8 +513,13 @@ body.dark-mode .mode-toggle-btn .icon {
   overflow: hidden;
 }
 
+/* form {
+  flex: 1;
+} */
+
 .contact-form-container form {
-  z-index: 1; 
+  flex: 1;
+  z-index: 1;
   /* background-color: rgba(255, 255, 255, 0.9); */
   display: flex;
   flex-direction: column;
